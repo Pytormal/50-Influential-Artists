@@ -1,4 +1,4 @@
-﻿html,
+html,
 body,
 div,
 span,
@@ -96,7 +96,7 @@ hr {
   width: 1000px;
 }
 .title-container {
-  padding: 0.5rem;
+  padding: .5rem;
   position: relative;
   text-align: center;
   color: white;
@@ -117,7 +117,7 @@ hr {
   transform: translate(-50%, -50%);
 }
 .title-container .home-png {
-  padding: 0.5rem;
+  padding: .5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -133,7 +133,7 @@ hr {
   text-align: center;
 }
 .artists-container img {
-  padding: 0.5rem;
+  padding: .5rem;
   height: 8rem;
   width: auto;
 }
@@ -145,6 +145,6 @@ hr {
   color: black;
 }
 .artists-container .bio {
-  padding: 0.5rem;
-  font-size: 0.5rem;
+  padding: .5rem;
+  font-size: .5rem;
 }
