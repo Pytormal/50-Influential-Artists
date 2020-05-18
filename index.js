@@ -201,6 +201,7 @@ const artists = [
     }
 ]
 
+
 // 🖌🖼 M V P 🖼🖌 //
 
 /* Task 1: Practice accessing data above by console.log-ing following items:
@@ -208,8 +209,8 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
-console.log(artists[0].name);
-console.log(artists[2].bio);
+// console.log(artists[0].name);
+// console.log(artists[2].bio);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
@@ -242,7 +243,8 @@ console.log(getArtistByIndex(artists, 0));
 * it will remove Amedeo Modigliani from our dataset.
 */
 function removeArtist(array, index) {
-    return array[index].shift
+    array.unshift();
+    return array[index];
 }
 
 
@@ -251,15 +253,27 @@ console.log(removeArtist(artists, 0));
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */) {
-
-    /* Code here */
-
+function lotsOfArt(array) {
+    ArtGreater100 = 0
+    // for (let i = 0; i < artists.length; i++) {
+    //     const Total = artists.paintings;
+    //     ArtGreater100 += Total
+    // }
+    // return ArtGreater100
+    const newArray = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i].paintings > 100)
+            newArray.push(array[i].name)
+    }
+    return newArray
 }
+console.log("he")
+console.log(lotsOfArt(artists))
+lotsOfArt(artists)
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
-
+ 
 id: 21
 name: Your Name Here, 
 years: Your Birth Year - current day,
@@ -267,21 +281,34 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
+// const addArtist = function (newArray) {
+//     let NArray = {
+//         id: 21,
+//         name: "Alex Andrew Mallory",
+//         years: "1992 - 2020",
+//         genre: "Web Design",
+//         nationality: "American",
+//         bio: "Add 1 - 2 sentences(or use lorem ipsum)"
+//     }
+//     newArray.push(NArray);
+
+
+// }
+
 function addArtist(array) {
-    return array.push(
+    return array.push({
         "id": 21,
-        "name": "Your Name Here",
-        "years": "Your Birth Year - current day",
+        "name": "Alex Andrew Mallory",
+        "years": "1992 - 2020",
         "genre": "Web Design",
-        "nationality": "Your Nationality Here",
-        "bio": "Add 1 - 2 sentences(or use lorem ipsum)"
-    )
-    console.log(addArtist(artists));
+        "nationality": "American",
+        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    })
+
 }
 
-
-
-
+// addArtist(artists)
+// console.log(artists)
 
 // 🎨🎨 STRETCH 🎨🎨//
 
@@ -294,9 +321,9 @@ function get20s(/* Code here */) {
 }
 
 /* STRETCH 2: Programtically console.log HTML element structure 
-
+ 
 In HTML, every artist and associated content uses the following structure: 
-
+ 
 <div id="artist">
 <div class="image">
     <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/starry-night-by-vincent-van-gogh-vincent-van-gogh.jpg"/>
@@ -306,11 +333,11 @@ In HTML, every artist and associated content uses the following structure:
 </div>
 <div class = "bio">Vincent Willem van Gogh (Dutch: [ˈvɪnsɛnt ˈʋɪləm vɑŋ ˈɣɔx] (listen); 30 March 1853 – 29 July 1890) was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade he created about 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. They include landscapes, still lifes, portraits and self-portraits, and are characterised by bold colours and dramatic, impulsive and expressive brushwork that contributed to the foundations of modern art. However, he was not commercially successful, and his suicide at 37 followed years of mental illness and poverty.</div>
 </div>
-
+ 
 Create a function called `getHTML()` that takes the parameter `data` and uses a for..in loop to format and console.log data like the example above. 
-
+ 
 The function should console.log 50 chunks of HTML code that match the structure above. 
-
+ 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
 function getHTML(/* Code here */) {
@@ -330,3 +357,4 @@ function randomize(/* Code here */) {
 
 
 /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+
