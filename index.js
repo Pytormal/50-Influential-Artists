@@ -269,7 +269,7 @@ bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
 function addArtist(array) {
     return array.push(
-        "id:" 21,
+        "id": 21,
         "name": "Your Name Here",
         "years": "Your Birth Year - current day",
         "genre": "Web Design",
