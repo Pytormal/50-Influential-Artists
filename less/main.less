@@ -1,4 +1,8 @@
-﻿hr {
+﻿@import "mixins.less";
+@import "variables.less";
+
+
+hr {
     width: 1000px;
 }
 
@@ -12,17 +16,11 @@
     .centered {
         display: flex;
         font-size: 2rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        .absolute-50;
     }
 
     .centered-btn {
-        position: absolute;
-        top: 55%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+       .absolute-50;
     }
 
     .home-png {
@@ -55,7 +53,7 @@
 
         .artist-name {
             font-size: 1rem;
-            color: black;
+           color: @text-color;
         }
     }
 

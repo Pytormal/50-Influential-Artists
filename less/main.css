@@ -1,8 +1,14 @@
+.absolute-50 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 hr {
   width: 1000px;
 }
 .title-container {
-  padding: .5rem;
+  padding: 0.5rem;
   position: relative;
   text-align: center;
   color: white;
@@ -18,12 +24,12 @@ hr {
 }
 .title-container .centered-btn {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .title-container .home-png {
-  padding: .5rem;
+  padding: 0.5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -39,7 +45,7 @@ hr {
   text-align: center;
 }
 .artists-container img {
-  padding: .5rem;
+  padding: 0.5rem;
   height: 8rem;
   width: auto;
 }
@@ -48,9 +54,9 @@ hr {
 }
 .artists-container .artist .artist-name {
   font-size: 1rem;
-  color: black;
+  color: Black;
 }
 .artists-container .bio {
-  padding: .5rem;
-  font-size: .5rem;
+  padding: 0.5rem;
+  font-size: 0.5rem;
 }
