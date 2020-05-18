@@ -1,0 +1,64 @@
+﻿@import "mixins.less";
+@import "variables.less";
+
+
+hr {
+    width: 1000px;
+}
+
+.title-container {
+    padding: .5rem;
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+
+    .centered {
+        display: flex;
+        font-size: 2rem;
+        .absolute-50;
+    }
+
+    .centered-btn {
+       .absolute-50;
+    }
+
+    .home-png {
+        padding: .5rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 20rem;
+        width: 35rem;
+    }
+}
+
+.artists-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+        padding: .5rem;
+        height: 8rem;
+        width: auto;
+    }
+
+    .artist {
+        width: 800px;
+
+
+        .artist-name {
+            font-size: 1rem;
+           color: @text-color;
+        }
+    }
+
+    .bio {
+        padding: .5rem;
+        font-size: .5rem;
+    }
+}
